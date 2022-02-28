@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student obj = new stu();
+            obj.sum(12,5);
+            Console.ReadLine();
+        }
+    }
+    class Student
+    {
+        public virtual void sum(int a, int b)
+        {
+            Console.WriteLine("Sum ="+(a+b));
+        }
+    }
+    class stu : Student
+    {
+        public override void sum(int a, int b)
+        {
+            base.sum(a,b);
+            Console.WriteLine("Mult = "+(a*b));
+        }
+    }
+}

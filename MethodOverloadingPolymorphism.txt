@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Student obj1 = new Student();
+            obj1.stu1(1001, "absd","sanjay");
+            Console.ReadKey();
+        }
+    }
+    class Student
+    {
+        public void stu1(int roll, string name)
+        {
+            Console.WriteLine("Srudent Details \n Roll- {0} Nmae-{1}",roll,name);
+        }
+        public void stu1(int roll, string name,int fee)
+        {
+            Console.WriteLine("Srudent Details \n Roll- {0} Nmae-{1} Fee{2}", roll, name,fee);
+        }
+        public void stu1(int roll, string name,string fname)
+        {
+            Console.WriteLine("Srudent Details \n Roll- {0} Nmae-{1} FatherName {2}", roll, name,fname);
+        }
+    }
+}

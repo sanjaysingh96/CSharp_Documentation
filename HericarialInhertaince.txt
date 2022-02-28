@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Thar obj1 = new Thar();
+            obj1.show("4X4",2300000,"black");
+            Bmw obj2 = new Bmw();
+            obj2.show("30X", 580000, "Red");
+            Console.ReadKey();
+        }
+    }
+    class Car
+    {
+        public string modal;
+        public int price;
+        public string color;
+
+    }
+    class Thar : Car
+    {
+        public void show(string m, int p, string c)
+        {
+            modal = m;
+            price= p;
+            color = c;
+            Console.WriteLine("Thar Details");
+            Console.WriteLine("Modal {0} Price {1} Color {2}",modal,price,color);
+        }
+    }
+    class Bmw : Car
+    {
+        public void show(string m, int p, string c)
+        {
+            modal = m;
+            price = p;
+            color = c;
+            Console.WriteLine("Bmw Details");
+            Console.WriteLine("Modal {0} Price {1} Color {2}", modal, price, color);
+        }
+    }
+}

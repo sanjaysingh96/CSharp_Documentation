@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Child obj=new Child();
+            obj.detail("Sanjay",20);
+            obj.rol(100);
+            Console.ReadKey();
+        }
+    }
+    class Base
+    {
+        public string name;
+        public int age;
+        public void detail(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+            Console.WriteLine(this.name);
+            Console.WriteLine(this.age);
+        }
+    }
+    class Child : Base
+    {
+        int roll;
+        public void rol(int roll)
+        {
+            this.roll = roll;
+            Console.WriteLine(roll);
+        }
+    }
+}
